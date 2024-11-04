@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace MVVM_implementacion_JLAR.VistaModelo
 {
-    internal class BaseViewModel
+    public class BaseViewModel
     {
         public INavigation Navigation;
 

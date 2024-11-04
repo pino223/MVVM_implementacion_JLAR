@@ -7,13 +7,13 @@ using Xamarin.Forms;
 
 namespace MVVM_implementacion_JLAR.VistaModelo
 {
-    internal class VMpatron : BaseViewModel
+    public class VMpagina1 : BaseViewModel
     {
         #region VARIABLES
         string _Texto;
         #endregion
         #region CONSTRUCTOR
-        public VMpatron(INavigation navigation)
+        public VMpagina1(INavigation navigation)
         {
             Navigation = navigation;
         }
@@ -28,9 +28,9 @@ namespace MVVM_implementacion_JLAR.VistaModelo
         #endregion
 
         #region PROCESOS
-        public async Task ProcesoAsyncrono()
+        public async Task Alerta()
         {
-
+            await DisplayAlert("Titulo", "Mensaje", "Ok");
         }
         public void ProcesoSimple()
         {
@@ -39,7 +39,7 @@ namespace MVVM_implementacion_JLAR.VistaModelo
         #endregion
 
         #region COMANDOS
-        public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
+        public ICommand Alertacommand => new Command(async () => await Alerta());
         public ICommand ProcesoSimpcommand => new Command(ProcesoSimple);
         #endregion
     }
