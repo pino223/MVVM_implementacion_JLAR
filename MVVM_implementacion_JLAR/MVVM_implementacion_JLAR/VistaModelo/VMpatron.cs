@@ -28,7 +28,7 @@ namespace MVVM_implementacion_JLAR.VistaModelo
         #endregion
 
         #region PROCESOS
-        public async Task ProcesoAsyncrono()
+        public async Task Procesoasync()
         {
 
         }
@@ -39,7 +39,7 @@ namespace MVVM_implementacion_JLAR.VistaModelo
         #endregion
 
         #region COMANDOS
-        public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
+        public ICommand ProcesoAsyncommand => new Command(async () => await Procesoasync());
         public ICommand ProcesoSimpcommand => new Command(ProcesoSimple);
         #endregion
     }
