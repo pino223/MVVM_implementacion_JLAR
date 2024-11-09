@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVM_implementacion_JLAR.Vista;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,10 +59,6 @@ namespace MVVM_implementacion_JLAR.VistaModelo
         #endregion
 
         #region PROCESOS
-        public async Task Procesoasync()
-        {
-            
-        }
         public void Sumar()
         {
             double n1 = 0;
@@ -75,10 +72,14 @@ namespace MVVM_implementacion_JLAR.VistaModelo
             r = n1 + n2;
             R = r.ToString();
         }
+        public async Task NavegarPagina2()
+        {
+            await Navigation.PushAsync(new Pagina2());
+        }
         #endregion
 
         #region COMANDOS
-        public ICommand Procesoasynccommand => new Command(async () => await Procesoasync());
+        public ICommand Navegarcommandpagina2 => new Command(async () => await NavegarPagina2());
         public ICommand Suymarcommand => new Command(Sumar);
         #endregion
     }
