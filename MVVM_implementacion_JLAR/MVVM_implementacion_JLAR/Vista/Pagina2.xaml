@@ -4,7 +4,12 @@
              x:Class="MVVM_implementacion_JLAR.Vista.Pagina2">
     <ContentPage.Content>
         <Grid>
-            <Image></Image>
+            <Image Source="flechavolver.png" VerticalOptions="Start" HeightRequest="50" 
+                   HorizontalOptions="Start" Margin="10">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
             <CollectionView ItemsSource="{Binding listausuarios}"
                         VerticalOptions="Center"
                         Margin="0,60,0,0"
@@ -28,7 +33,8 @@
 
                             </StackLayout>
                             <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Path=BindingContext.Alertacommand, Source={x:Reference listauser}}" CommandParameter="{Binding .}"/>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.Alertacommand, Source={x:Reference listauser}}" 
+                                                      CommandParameter="{Binding .}"/>
                             </Frame.GestureRecognizers>
                         </Frame>
                     </DataTemplate>

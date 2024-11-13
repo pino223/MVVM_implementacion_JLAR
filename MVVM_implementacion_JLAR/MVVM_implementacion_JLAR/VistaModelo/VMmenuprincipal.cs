@@ -11,23 +11,23 @@ namespace MVVM_implementacion_JLAR.VistaModelo
 {
     internal class VMmenuprincipal : BaseViewModel
     {
-        #region
+        #region VARIABLES
         string _Texto;
-        public List<Mmenuprincipal> listausuarios { get; set; }
+        public List<Mmenuprincipal> Listapaginas { get; set; }
         #endregion
         #region CONSTRUCTOR 
         public VMmenuprincipal(INavigation navigation)
         {
             Navigation = navigation;
-            Mostrarusuarios();
+            MostrarPaginas();
         }
 
         #endregion
 
         #region OBJETOS
-        public void Mostrarusuarios()
+        public void MostrarPaginas()
         {
-            listausuarios = new List<Mmenuprincipal>
+            Listapaginas = new List<Mmenuprincipal>
             {
                 new Mmenuprincipal
                 {

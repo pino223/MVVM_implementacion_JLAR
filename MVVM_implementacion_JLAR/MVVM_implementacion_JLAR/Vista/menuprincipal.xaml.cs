@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVM_implementacion_JLAR.VistaModelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace MVVM_implementacion_JLAR.Vista
         public menuprincipal()
         {
             InitializeComponent();
+            BindingContext = new VMmenuprincipal(Navigation);
         }
     }
 }
