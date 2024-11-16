@@ -11,7 +11,7 @@ namespace MVVM_implementacion_JLAR
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new menuprincipal()); 
+            MainPage = new NavigationPage(new Pagina1()); 
         }
 
         protected override void OnStart()

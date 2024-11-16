@@ -74,12 +74,12 @@ namespace MVVM_implementacion_JLAR.VistaModelo
         }
         public async Task NavegarPagina2()
         {
-            await Navigation.PushAsync(new Pagina2());
+            await Navigation.PushAsync(new Page2());
         }
         #endregion
 
         #region COMANDOS
-        public ICommand Navegarcommandpagina2 => new Command(async () => await NavegarPagina2());
+        public ICommand Navegarpagina2command => new Command(async () => await NavegarPagina2());
         public ICommand Suymarcommand => new Command(Sumar);
         #endregion
     }
